@@ -1,7 +1,7 @@
 # Baseball_Gambling_Game
 
 # Inspiration
-For me, when my partner brought up the idea of predicting baseball calls (as a sport), I felt inspired because I know quite a lot about baseball. In fact, I feel very passionate about it.
+For me, when my partner brought up the idea of predicting baseball calls (as a sport), I felt inspired because I know quite a lot about baseball. In fact, I feel very passionate about it. This is intended to create a new form of entertainment for sports betters.
 
 # What it does
 Challenges a user to guess what the call by the umpire is.
