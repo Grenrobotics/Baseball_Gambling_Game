@@ -8,6 +8,7 @@ var qOverlay=document.getElementById("questions");
 var rightOverlay =document.getElementById("rOverlay");
 var wrongOverlay =document.getElementById("wOverlay");
 var LoseOverlay =document.getElementById("gOverlay");
+var count=0;
 myVideo.defaultPlaybackRate = 1;
 myVideo.load();
 myVideo.addEventListener('timeupdate', function(){
@@ -58,6 +59,7 @@ function out() {
     }
     else {
         wrong();
+        
     }
 }
 
@@ -66,6 +68,9 @@ function right() {
     rightOverlay.style.display = "block";
     selectedSafe = false;
     selectedOut = false;
+    count++;
+        document.getElementById("ballCount").innerText=count;
+    
 }
 
 
@@ -74,4 +79,6 @@ function wrong() {
     wrongOverlay.style.display = "block";
     selectedSafe = false;
     selectedOut = false;
+    count++;
+        document.getElementById("strikeCount").innerText=count;
 }
