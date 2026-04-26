@@ -50,6 +50,34 @@
         font-size: 35px;
       }
 
+      .wrongOverlay {
+        width: 248px;
+        height: 526px;
+        background-color: #d4b896;
+        position: absolute;
+        left: 1032px;
+        right: 20px;
+        top: 130px;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 35px;
+      }
+
+      .loseOverlay {
+        width: 700px;
+        height: 700px;
+        background-color: #d4b896;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 35px;
+      }
+
       .outButton {
         background-color: #8b1a1a;
         border-color: #8b1a1a;
@@ -62,6 +90,34 @@
         height: 100px;
         left: 60px;
         top: 400px;
+      }
+
+      .nextButton {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 60px;
+        top: 290px;
+      }
+
+      .tryAgain {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 60px;
+        top: 290px;
       }
 
       .safeButton {
@@ -86,15 +142,16 @@
     </div>
 
     <div class="questionOverlay" id="questions" hidden>
-      <button class="outButton" onclick="q()" id="b1">Out</button>
-      <button class="safeButton" id="b2">Safe</button>
+      <button class="outButton" onClick="out()" id="b1">Out</button>
+      <button class="safeButton" onClick="safe()" id="b2">Safe</button>
       What was the umpire's call?
     </div>
 
-    <div class="rightOverlay" id="rightOverlay" hidden>Right!</div>
+    <div class="rightOverlay" id="rOverlay" hidden>Right!</div>
 
-    <div class="wrongOverlay" id="wrongOverlay" hidden>Wrong!</div>
+    <div class="loseOverlay" id="gOverlay" hidden>GAME OVER</div>
 
+    <div class="wrongOverlay" id="wOverlay" hidden>Wrong!</div>
     <!-- Video Player -->
     <div class="video-box" id="vbox">
       <video
@@ -105,9 +162,12 @@
         controls
         muted
       >
-        <source src="0425.mp4" type="video/mp4" id="video" />
+        <source src="broncoHackVideo.mp4" type="video/mp4" id="video" />
       </video>
     </div>
+    <div class="nextButton" hidden>Next</div>
+
+    <div class="tryAgain" hidden>Try again!</div>
 
     <script src="test.js"></script>
   </body>
