@@ -1,6 +1,8 @@
 var pauseTime=3;
-const selectedSafe = false
-const selectedOut = false
+var selectedSafe = false
+var selectedOut = false
+var a = ["s", "o", "o", "s", "o", "o", "s", "o", "o", "s", "s"];
+var index = 0;
 var myVideo=document.getElementById("vid");
 var qOverlay=document.getElementById("questions");
 var rightOverlay =document.getElementById("rOverlay");
@@ -14,6 +16,20 @@ myVideo.addEventListener('timeupdate', function(){
     qOverlay.style.display="block";
     }
 });
+
+function isCorrect() {
+    if (a[index] === "s" && selectedSafe) {
+        index++;
+        return true;
+    }
+    else if (a[index] === "o" && selectedOut) {
+        index++;
+        return true;
+    }
+    index++;
+    return false;
+}
+//safe, out, out,safe, out , out, safe, out, out, safe, safe
 
 function q() {
     qOverlay.style.display = "none";
