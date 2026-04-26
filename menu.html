@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baseball Gambling Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .title {
+        text-align: center;
+        color: black;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .video-box {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -60px;
+      }
+
+      .questionOverlay {
+        width: 248px;
+        height: 526px;
+        background-color: #d4b896;
+        position: absolute;
+        left: 1032px;
+        right: 20px;
+        top: 130px;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 35px;
+      }
+
+      .rightOverlay {
+        width: 248px;
+        height: 526px;
+        background-color: #d4b896;
+        position: absolute;
+        left: 1032px;
+        right: 20px;
+        top: 130px;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 35px;
+      }
+
+      .wrongOverlay {
+        width: 248px;
+        height: 526px;
+        background-color: #d4b896;
+        position: absolute;
+        left: 1032px;
+        right: 20px;
+        top: 130px;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 35px;
+      }
+
+      .loseOverlay {
+        width: 700px;
+        height: 700px;
+        background-color: #d4b896;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        font-family:
+          "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        font-size: 35px;
+      }
+
+      .outButton {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 60px;
+        top: 400px;
+      }
+
+      .nextButton2 {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 1090px;
+        top: 290px;
+      }
+
+      .safeButton {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 60px;
+        top: 290px;
+      }
+
+      .ballCounter {
+        position: absolute;
+        top: 20px;
+        left: 250px;
+        font-size: 20px;
+      }
+
+      .strikeCounter {
+        position: absolute;
+        top: 20px;
+        left: 950px;
+        font-size: 20px;
+      }
+
+      .winScreen,
+      .loseScreen {
+        position: absolute;
+        top: 200px;
+        left: 400px;
+        font-size: 60px;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body style="background-color: #faf9f6">
+    <div class="title">
+      <h1>Baseball Gambling Game</h1>
+      <p>Choose the best answer!</p>
+    </div>
+
+    <div class="questionOverlay" id="questions" hidden>
+      <button class="outButton" onClick="out()" id="b1">Out</button>
+      <button class="safeButton" onClick="safe()" id="b2">Safe</button>
+      What was the umpire's call?
+    </div>
+
+    <div class="rightOverlay" id="rOverlay" hidden>Right!</div>
+
+    <div class="loseOverlay" id="gOverlay" hidden>GAME OVER</div>
+
+    <div class="wrongOverlay" id="wOverlay" hidden>Wrong!</div>
+    <!-- Video Player -->
+    <div class="video-box" id="vbox">
+      <video
+        id="vid"
+        preload="metadata"
+        width="800"
+        height="600"
+        controls
+        muted
+      >
+        <source src="broncoHackVideo.mp4" type="video/mp4" id="video" />
+      </video>
+    </div>
+    <div class="nextButton" id="nButton" hidden>
+      <button class="nextButton2" onClick="next()" id="b3">Next</button>
+    </div>
+
+    <div class="ballCounter">
+      Balls:
+      <h1 id="ballCount">0</h1>
+    </div>
+
+    <div class="strikeCounter">
+      Strike:
+      <h1 id="strikeCount">0</h1>
+    </div>
+
+    <div class="winScreen" id="wonScreen" hidden>You win!!!</div>
+
+    <div class="loseScreen" id="lostScreen" hidden>You lose!!</div>
+    <script src="test.js"></script>
+  </body>
+</html>
