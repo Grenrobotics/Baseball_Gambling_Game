@@ -1,4 +1,6 @@
-var pauseTime=1.9;
+var pauseTime=3;
+const selectedSafe = false
+const selectedOut = false
 var myVideo=document.getElementById("vid");
 var qOverlay=document.getElementById("questions");
 var rightOverlay =document.getElementById("rOverlay");
@@ -21,10 +23,35 @@ function gameOver() {
     LoseOverlay.style.display = "block";
 }
 
+function safe() {
+    selectedSafe = true;
+    if (isCorrect()) {
+        right();
+    }
+    else {
+        wrong();
+    }
+}
+
+function out() {
+    selectedOut = true;
+    if (isCorrect()) {
+        right();
+    }
+    else {
+        wrong();
+    }
+}
+
 function right() {
     rightOverlay.style.display = "block";
+    selectedSafe = false
+    selectedOut = false
 }
 
 function wrong() {
+    q()
     wrongOverlay.style.display = "block";
+    selectedSafe = false
+    selectedOut = false
 }
