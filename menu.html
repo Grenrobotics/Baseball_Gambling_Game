@@ -14,7 +14,6 @@
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       }
 
-
       .video-box {
         align-items: center;
         display: flex;
@@ -22,7 +21,6 @@
         align-items: center;
         margin-top: -60px;
       }
-
 
       .questionOverlay {
         width: 248px;
@@ -80,7 +78,6 @@
         font-size: 35px;
       }
 
-
       .outButton {
         background-color: #8b1a1a;
         border-color: #8b1a1a;
@@ -95,6 +92,33 @@
         top: 400px;
       }
 
+      .nextButton {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 60px;
+        top: 290px;
+      }
+
+      .tryAgain {
+        background-color: #8b1a1a;
+        border-color: #8b1a1a;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        left: 60px;
+        top: 290px;
+      }
 
       .safeButton {
         background-color: #8b1a1a;
@@ -117,25 +141,17 @@
       <p>Choose the best answer!</p>
     </div>
 
-
     <div class="questionOverlay" id="questions" hidden>
       <button class="outButton" onClick="out()" id="b1">Out</button>
       <button class="safeButton" onClick="safe()" id="b2">Safe</button>
-
       What was the umpire's call?
     </div>
 
-    <div class ="rightOverlay" id="rOverlay" hidden>
-      Right!
-    </div>
+    <div class="rightOverlay" id="rOverlay" hidden>Right!</div>
 
-    <div class ="loseOverlay" id="gOverlay" hidden>
-      GAME OVER
-    </div>
+    <div class="loseOverlay" id="gOverlay" hidden>GAME OVER</div>
 
-    <div class ="wrongOverlay" id="wOverlay" hidden>
-      Wrong!
-    </div>
+    <div class="wrongOverlay" id="wOverlay" hidden>Wrong!</div>
     <!-- Video Player -->
     <div class="video-box" id="vbox">
       <video
@@ -149,8 +165,10 @@
         <source src="broncoHackVideo.mp4" type="video/mp4" id="video" />
       </video>
     </div>
-
-
+    <div class="nextButton" hidden>Next
+      <button class="nextButton" onClick="next()" id="b3">Safe</button>
+    </div>
+    </body>
     <script src="test.js"></script>
   </body>
 </html>

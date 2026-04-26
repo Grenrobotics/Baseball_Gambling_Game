@@ -8,6 +8,7 @@ var qOverlay=document.getElementById("questions");
 var rightOverlay =document.getElementById("rOverlay");
 var wrongOverlay =document.getElementById("wOverlay");
 var LoseOverlay =document.getElementById("gOverlay");
+var nextButton =document.getElementById("b3")
 myVideo.defaultPlaybackRate = 1;
 myVideo.load();
 myVideo.addEventListener('timeupdate', function(){
@@ -59,10 +60,15 @@ function out() {
     }
 }
 
+function next() {
+    nextButton.style.display = "none";
+}
+
 function right() {
     rightOverlay.style.display = "block";
     selectedSafe = false
     selectedOut = false
+    nextButton.style.display = "block";
 }
 
 function wrong() {
@@ -70,4 +76,5 @@ function wrong() {
     wrongOverlay.style.display = "block";
     selectedSafe = false
     selectedOut = false
+    nextButton.style.display = "block";
 }
