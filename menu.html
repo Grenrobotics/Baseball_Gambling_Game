@@ -133,6 +133,20 @@
         left: 60px;
         top: 290px;
       }
+
+      .ballCounter {
+        position: absolute;
+        top: 20px;
+        left: 250px;
+        font-size: 20px;
+      }
+
+      .strikeCounter {
+        position: absolute;
+        top: 20px;
+        left: 950px;
+        font-size: 20px;
+      }
     </style>
   </head>
   <body style="background-color: #faf9f6">
@@ -167,7 +181,17 @@
     </div>
     <div class="nextButton" hidden>Next</div>
 
-    <div class="tryAgain" hidden>Try again!</div>
+    <div class="ballCounter">
+      Balls:
+      <h1 id="ballCount">0</h1>
+      >
+    </div>
+
+    <div class="strikeCounter">
+      Strike:
+      <h1 id="strikeCount">0</h1>
+      >
+    </div>
 
     <script src="test.js"></script>
   </body>
